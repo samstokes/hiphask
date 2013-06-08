@@ -1,0 +1,25 @@
+name: hiphask
+version: 0.0.0
+author: Sam Stokes
+synopsis: Hipchat notifier
+description: Notifies Hipchat
+build-type: Simple
+cabal-version: >= 1.10
+
+library
+  exposed-modules: Network.Hiphask
+
+  build-depends: base >= 4 && < 5
+  default-language: Haskell2010
+
+
+executable hiphask
+  main-is: ../main.hs
+
+  hs-source-dirs: dist
+
+  build-depends: base
+               , hiphask
+               , bytestring
+               , http-conduit
+  default-language: Haskell2010
